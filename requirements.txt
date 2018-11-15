@@ -1,3 +1,4 @@
+django-icons-tango
 django-happenings
 Adafruit_GPIO
 google-api-python-client
