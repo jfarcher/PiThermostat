@@ -1,0 +1,10 @@
+django-happenings
+Adafruit_GPIO
+google-api-python-client
+pytz
+evdev
+pygame
+redis
+configparser
+urllib3
+apiclient

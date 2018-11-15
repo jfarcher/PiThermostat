@@ -16,9 +16,17 @@ The file structure of this project is as follows:
     icons - graphics used by thermostat_gui.py. Can be moved, but icon_dir in thermostat_gui.py will need updating.
     utilities/433PlanB - to be used in the event of redis/thermostat_gui.py dying.
 
-Requires the Adafruit libraries to read from the TMP102:
+Install all python requirements
 
-    pip install Adafruit_GPIO
+    pip install --upgrade -r requirements.txt
+
+These being:
+
+    * Adafruit libraries to read from the TMP102
+    * Django happenings for Calendaring
+    * Python Google API
+    * Redis
+    * Configparser
 
 Install i2c using raspi-config
  
@@ -30,20 +38,9 @@ Most of the Work below can now be performed using make:
 
     make install
 
-Using django happenings for Calendaring (see Django setup below):
-
-This is now the Default behaviour:
-
-    sudo pip install django-happenings
-
-Install the Python Google API:
-
-     sudo pip install --upgrade google-api-python-client pytz evdev pygame redis smbus configparser
-     sudo pip install apiclient urllib3
-
-     mkdir /etc/google_calendar/
-
 Create a new Google calendar called thermostat. You need to allow access through to this calendar here: https://developers.google.com/google-apps/calendar/get_started . Download the client-secrets.json file and put it into /etc/google_calendar/
+     
+     mkdir /etc/google_calendar/
 
      sudo cp client-secrets.json /etc/google_calendar
 
